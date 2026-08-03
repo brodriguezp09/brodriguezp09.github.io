@@ -9,10 +9,6 @@ const config: Config = {
   tagline: 'Apuntes, ejercicios y material de clase, siempre actualizados',
   favicon: 'img/favicon.ico',
   customFields: {},
-  // dentro de metadata:
-  metadata: [
-    { name: 'description', content: 'Material didáctico del ciclo de [nombre del ciclo]: apuntes, ejercicios prácticos y documentos de clase.' },
-  ],
   
 
 
