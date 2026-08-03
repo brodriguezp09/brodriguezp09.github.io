@@ -8,6 +8,11 @@ const config: Config = {
   title: 'Apuntes FP',
   tagline: 'Apuntes, ejercicios y material de clase, siempre actualizados',
   favicon: 'img/favicon.ico',
+  customFields: {},
+  // dentro de metadata:
+  metadata: [
+    { name: 'description', content: 'Material didáctico del ciclo de [nombre del ciclo]: apuntes, ejercicios prácticos y documentos de clase.' },
+  ],
   
 
 
@@ -76,6 +81,9 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+    metadata: [
+      { name: 'description', content: 'Material didáctico del curso de especialización de Formación Profesional de Grado Superior en Recursos y servicios en la nube: apuntes, ejercicios prácticos y documentos de clase.' },
+    ],
     navbar: {
       title: 'My Site',
       logo: {
