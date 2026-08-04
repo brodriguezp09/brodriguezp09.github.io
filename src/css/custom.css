@@ -128,7 +128,72 @@ kbd {
   border-color: #FF7A44;
 }
 
-/* ---------- Sidebar: un toque más "técnico" ---------- */
+/* ---------- Tablas ---------- */
+.markdown table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--ifm-table-border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: table;
+  /* evita el scroll horizontal forzado por defecto de Infima cuando no hace falta */
+  width: 100%;
+}
+
+.markdown table thead tr {
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme='dark'] .markdown table thead tr {
+  background-color: #161618;
+}
+
+.markdown table th {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ifm-color-content-secondary);
+  border-bottom: 1px solid var(--ifm-table-border-color);
+}
+
+.markdown table td {
+  border-color: var(--ifm-table-border-color);
+}
+
+.markdown table tr:nth-child(even) {
+  background-color: transparent;
+}
+
+[data-theme='light'] .markdown table tr:nth-child(even) {
+  background-color: #FBFAF8;
+}
+
+[data-theme='dark'] .markdown table tr:nth-child(even) {
+  background-color: #0E0E10;
+}
+
+/* ---------- Bloques de código ---------- */
+.markdown pre {
+  border-radius: 8px;
+  border: 1px solid var(--ifm-toc-border-color);
+  font-size: 0.88rem;
+}
+
+.markdown code:not(pre code) {
+  background-color: rgba(255, 90, 31, 0.08);
+  color: #C7430E;
+  border-radius: 4px;
+  padding: 0.15rem 0.4rem;
+  border: none;
+}
+
+[data-theme='dark'] .markdown code:not(pre code) {
+  background-color: rgba(255, 90, 31, 0.12);
+  color: #FF9563;
+}
+
 .menu__link {
   border-radius: 6px;
   font-size: 0.92rem;

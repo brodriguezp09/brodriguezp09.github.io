@@ -45,6 +45,7 @@ class HorarioAdmin(admin.ModelAdmin):
         # rompería la semántica "sustituir todo el horario del
         # empleado" del cargador en la próxima recarga.
         return False
+
 ```
 
 
@@ -59,4 +60,19 @@ erDiagram
 
 
 **Lorem Ipsum** is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's st`andard dummy text ever sinc`e 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 🤘🏽 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typ
+
+
+:::tip
+Consejo
+:::
+
+
+:::warning
+Warning
+:::
+
+
+:::danger
+Danger
+:::
 
