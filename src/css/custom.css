@@ -1,30 +1,139 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * custom.css — estilo generado a partir del diseño de Claude Design
+ * Tipografía: Space Grotesk (texto) + IBM Plex Mono (código)
+ * Acento: naranja eléctrico #FF5A1F
  */
 
-/* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+/* ---------- Modo claro ---------- */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Space Grotesk', sans-serif;
+  --ifm-font-family-monospace: 'IBM Plex Mono', monospace;
+
+  --ifm-color-primary: #FF5A1F;
+  --ifm-color-primary-dark: #e64f16;
+  --ifm-color-primary-darker: #d94a14;
+  --ifm-color-primary-darkest: #b33d11;
+  --ifm-color-primary-light: #ff6836;
+  --ifm-color-primary-lighter: #ff7a44;
+  --ifm-color-primary-lightest: #ff916a;
+
+  --ifm-background-color: #F7F6F3;
+  --ifm-background-surface-color: #FFFFFF;
+  --ifm-navbar-background-color: #F6F5F1;
+  --ifm-footer-background-color: #F2F1EE;
+
+  --ifm-color-content: #161618;
+  --ifm-color-content-secondary: #6B6963;
+
+  --ifm-toc-border-color: #E7E4DE;
+  --ifm-table-border-color: #E7E4DE;
+  --ifm-hr-border-color: #D6D2CA;
+
+  --ifm-code-font-size: 92%;
+  --ifm-global-radius: 8px;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 90, 31, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* ---------- Modo oscuro ---------- */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #FF5A1F;
+  --ifm-color-primary-dark: #e64f16;
+  --ifm-color-primary-darker: #d94a14;
+  --ifm-color-primary-darkest: #b33d11;
+  --ifm-color-primary-light: #ff6836;
+  --ifm-color-primary-lighter: #ff7a44;
+  --ifm-color-primary-lightest: #ff916a;
+
+  --ifm-background-color: #0A0A0B;
+  --ifm-background-surface-color: #111113;
+  --ifm-navbar-background-color: #0E0E10;
+  --ifm-footer-background-color: #0E0E10;
+
+  --ifm-color-content: #F0EEEA;
+  --ifm-color-content-secondary: #A6A29A;
+
+  --ifm-toc-border-color: #1E1E21;
+  --ifm-table-border-color: #1E1E21;
+  --ifm-hr-border-color: #1E1E21;
+
+  --docusaurus-highlighted-code-line-bg: rgba(255, 90, 31, 0.15);
+}
+
+/* ---------- Tipografía ---------- */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.navbar__title,
+.hero__title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+code,
+pre,
+kbd {
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* ---------- Bordes y esquinas más consistentes con el diseño ---------- */
+.card,
+.alert,
+.pagination-nav__link,
+.button {
+  border-radius: 8px !important;
+}
+
+.navbar {
+  box-shadow: none;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+/* ---------- Admonitions (callouts): tip / warning / info / danger ---------- */
+[data-theme='light'] .theme-admonition-tip {
+  --ifm-color-success-contrast-background: #E8F5EC;
+  --ifm-color-success-contrast-foreground: #2F7A48;
+}
+
+[data-theme='dark'] .theme-admonition-tip {
+  --ifm-color-success-contrast-background: rgba(143, 214, 168, 0.1);
+  --ifm-color-success-contrast-foreground: #8FD6A8;
+}
+
+[data-theme='light'] .theme-admonition-warning {
+  --ifm-color-warning-contrast-background: #FBF1DD;
+  --ifm-color-warning-contrast-foreground: #8A5A12;
+}
+
+[data-theme='dark'] .theme-admonition-warning {
+  --ifm-color-warning-contrast-background: rgba(232, 184, 94, 0.12);
+  --ifm-color-warning-contrast-foreground: #E8B85E;
+}
+
+.theme-admonition {
+  border-radius: 8px;
+  border-left-width: 3px;
+}
+
+/* ---------- Botones con el acento naranja ---------- */
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--primary:hover {
+  background-color: #FF7A44;
+  border-color: #FF7A44;
+}
+
+/* ---------- Sidebar: un toque más "técnico" ---------- */
+.menu__link {
+  border-radius: 6px;
+  font-size: 0.92rem;
+}
+
+.menu__link--active:not(.menu__link--sublist) {
+  font-weight: 600;
 }
